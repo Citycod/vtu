@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#ab2923">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="csrf-token" content="844a727b4c21469e8e73538561852f997fb45233">
+  <meta name="google-site-verification" content="c_LAXHEHxcNq1-aJO5h6KHVhmuVz7pgsfx9HbbN7BXg" />
+    <meta name="description"
+    content="Fastest and easiest way to convert your airtime to cash. Accept payments for your business and services today using airtime." />
+  
+    <meta name="keywords"
+    content="Easiest way to convert airtime to cash in Nigeria, Make payment with airtime, Send and recieve payment in Nigeria with airtime, airtime is money, buy cheap data, MTN, Glo, 9mobile, Airtel, make payment for Gotv, Dstv" />
+    <meta property="og:image" content="FAVICON.png">
+  <title>BUJU DATA  - Easiest way to convert airtime to cash and buy data
+</title>
+  <!-- Tailwind CSS  <link
+  href="project tailwind/src/output.css"
+  rel="stylesheet"
+/> -->
+
+<script src="https://cdn.tailwindcss.com"></script>
+ 
+<link rel="stylesheet" href="assets/css/v2/styles2893.css?v=2.5.67"/>
+<link rel="stylesheet" href="assets/css/v2.5/fonts2893.css?v=2.5.67"/>
+<link rel="stylesheet" href="assets/css/v2/iziToast.min2893.css?v=2.5.67"/>
+<link rel="stylesheet" href="assets/css/v2/sweetalert2.min2893.css?v=2.5.67"/>
+  <link rel="stylesheet" href="assets/fontawesome-free-6.1.2-web/css/all.min.css">
+  <link rel="icon" href="FAVICON.png">
+  <script src="assets/js/v2/alpine.persist.min.js" defer></script>
+  <script src="assets/js/v2/alpine.intersect.min.js" defer></script>
+  <script defer src="assets/js/v2/alpine.min.js"></script>
+  <script src="assets/js/axios.min2893.js?v=2.5.67"></script>
+  <script>const BASE_URL = 'index.html';</script>
+  <script src="assets/js/v2/iziToast.min2893.js?v=2.5.67"></script>
+  <script src="assets/js/v2/sweetalert2.all.min2893.js?v=2.5.67"></script>
+  <script src="assets/js/v2/utils2893.js?v=2.5.67"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90432823-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-90432823-1');
+  </script>
+
+    </head>
+
+
+    <body class="font-sans bg-white">
+      <header 
+        x-ref="header"
+        x-data="{scrolled: false, mnav_opened: false}"
+        x-init="() => {
+      window.addEventListener('scroll', e => {
+        let { scrollY } = window
+        scrolled = scrollY > ($refs.header.offsetHeight + 20)
+      })
+    }"
+        class="fixed top-0 left-0 z-50 w-full transition-shadow duration-500 bg-white"
+        :class="scrolled ? 'shadow-sm' : 'shadow-none'"
+      >
+        <div class="bg-white content">
+          <div
+            class="flex items-center justify-between p-4 border-b border-blue-600"
+          >
+            <div>
+              <a href="NEW2.HTML">
+                <img
+                  class="w-auto h-20 border-4 border-blue-600 rounded-full shadow-2xl"
+                  src="buju data.png"
+                  alt="BUJU DATA LOGO"
+                />
+              </a>
+            </div>
+            <div class="hidden space-x-10 lg:flex">
+  
+                <a
+                  href="NEW2.HTML"
+                  class="text-blue-600 hover:underline"
+                >
+                  Home
+                </a>
+                <a
+                  href="transact.html"
+                  class="text-blue-600 hover:underline"
+                >
+                  Airtime to Cash
+                </a>
+                 <a href="user/transact.html" class="text-blue-600 hover:underline"
+              >Pay Bills</a
+            >
+                <a
+                  href="data-topup.html"
+                  class="text-blue-600 hover:underline"
+                >
+                  Data
+                </a>
+                <a
+                  href="nairapin.html"
+                  class="text-blue-600 hover:underline"
+                >
+                  Nairapin
+                </a>
+              </nav>
+            </div>
+            <div>
+              <nav class="items-center hidden lg:flex gap-x-6">
+                <a
+                  href="login.html"
+                  class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+                >
+                  Sign In
+                </a>
+                <a
+                  href="register.html"
+                  class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+                >
+                  Sign Up
+                </a>
+              </div>
+              <nav class="lg:hidden">
+                <a
+                  href="#"
+                  @click.prevent="mnav_opened = !mnav_opened"
+                  class="inline-flex items-center justify-center w-8 h-8 text-blue-500 border border-blue-600 rounded-full"
+                >
+                  <i class="fa" :class="mnav_opened ? 'fa-times' : 'fa-bars'"></i>
+                  <span class="hidden">Menu</span>
+                </a>
+              </nav>
+            </div>
+          </div>
+          <div class="pb-10 mt-5 lg:hidden" :class="mnav_opened ? '' : 'hidden'">
+            <div class="grid gap-5 text-center">
+              <a
+                href="NEW2.HTML"
+                class="text-blue-600 hover:underline"
+              >
+                Home
+              </a>
+              <a
+                href="../user/transact.html"
+                class="text-blue-600 hover:underline"
+              >
+                Airtime to Cash
+              </a>
+              <a
+                href="data-topup.html"
+                class="text-blue-600 hover:underline"
+              >
+                Data
+              </a>
+              <a
+                href="../nairapin.html"
+                class="text-blue-600 hover:underline"
+              >
+                Nairapin
+              </a>
+  
+              <a
+                href="login.html"
+                class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+              >
+                Sign In
+              </a>
+              <a
+                href="../register.html"
+                class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+              
+              >
+                Sign Up
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  <section class="pt-6 bg-blue-100 lg:pt-16">
+  <div class=" content lg:py-20">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+      <div class="py-20">
+        <h1 class=" text-4xl font-bold leading-snug lg:text-6xl lg:leading-[1.2]">
+          The easiest way to make your <span class="text-blue-600">online</span> payments.
+        </h1>
+        <p class="mt-6">
+          Convert your airtime to cash, make & receive payments, instant airtime and data delivery, make bill payments
+          with <span class="font-bold text-blue-600">BUJU DATA. </span> 
+        </p>
+        <div class="flex mt-12 gap-x-5">
+          <a target="_blank" href=""
+            class="inline-flex items-center justify-between py-3 text-sm tracking-wide text-white duration-300 bg-black rounded-lg hover:scale-105 hover:bg-gray-900 px-7">
+            <i class="mr-4 text-xl fab fa-apple"></i>
+            <div>
+              <div class="text-xs font-light">Get it on</div>
+              <div class="font-bold">App Store</div>
+            </div>
+          </a>
+          <a target="_blank" href=""
+            class="inline-flex items-center justify-between py-3 text-sm tracking-wide text-white duration-300 bg-black rounded-lg hover:scale-105 hover:bg-gray-900 px-7">
+            <i class="mr-4 text-xl fab fa-google-play"></i>
+            <div>
+              <div class="text-xs font-light">Download on</div>
+              <div class="font-bold">Play Store</div>
+            </div>
+          </a>
+        </div>
+        <div class="mt-10">
+          <a href="#">
+            <i class="mr-2 text-blue-500 fa fa-circle animate-pulse"></i>
+            New to Airtime to cash? <a href="transact.html" class="underline hover:no-underline">How it
+              works</span>
+            </a>
+        </div>
+      </div>
+      <div class="justify-end hidden lg:flex">
+        <img class="w-11/12 h-auto" src="image.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class=" bg-blue-200 bg-[length:35%] lg:bg-[center_right_-200px]">
+  <div class="pt-20 lg:pb-24 lg:pt-32">
+    <div class="content"> 
+      <h2 class="pl-10 text-2xl font-bold border-l-4 border-blue-600 lg:text-4xl lg:leading-snug">
+        Join over <span class="text-blue-600">2M</span> <br>
+        people who use <span class="text-blue-600 ">BUJU DATA. </span>
+      </h2>
+      <div class="grid grid-cols-1 gap-8 mt-20 lg:gap-14 lg:grid-cols-3">
+        <div
+          class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow lg:p-10 hover:-translate-y-2 hover:bg-gray-50">
+          <div>
+            <img class="w-10 h-10" src="assets/images/v2/airtime-to-cash.png" alt="Airtime to Cash">
+          </div>
+          <div class="mt-5 font-bold text-blue-600">
+            Instant Airtime to Cash
+          </div>
+          <div class="mt-4 font-light">
+            Convert your airtime to cash in seconds using the new and improved Airtime to cash service.
+          </div>
+        </div>
+        <div class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow hover:-translate-y-2 hover:bg-gray-50">
+          <div>
+            <img class="w-10 h-10" src="assets/images/v2/airtime.png" alt="Airtime topup">
+          </div>
+          <div class="mt-5 font-semibold text-blue-600">
+            Airtime Topup
+          </div>
+          <div class="mt-4 font-light">
+            Purchase airtime for MTN, Glo, 9mobile & Airtel at the best possible / discounted rates.
+          </div>
+        </div>
+        <div class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow hover:-translate-y-2 hover:bg-gray-50">
+          <div>
+            <img class="w-10 h-10" src="wifi_16781237.png" alt="Data purchase">
+          </div>
+          <div class="mt-5 font-semibold text-blue-600">
+            Data Purchase
+          </div>
+          <div class="mt-4 font-light">
+            We offer the best rates on data purchase for all available networks in Nigeria.
+          </div>
+        </div>
+        <div class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow hover:-translate-y-2 hover:bg-gray-50">
+          <div>
+            <img class="w-10 h-10" src="dollar-bill_16905292.png" alt="Bill Payment">
+          </div>
+          <div class="mt-5 font-semibold text-blue-600">
+            Bill Payments
+          </div>
+          <div class="mt-4 font-light">
+            Pay for your Tv/Cable (Dstv, Gotv, etc.), Internet, Electricity & other merchants using BUJU DATA.
+          </div>
+        </div>
+        <div class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow hover:-translate-y-2 hover:bg-gray-50">
+          <div>
+            <img class="w-10 h-10" src="assets/images/v2/nairapin.png" alt="Airtime Payments">
+          </div>
+          <div class="mt-5 font-semibold text-blue-600">
+            Airtime Payments
+          </div>
+          <div class="mt-4 font-light">
+            Send and receive payments, pay bills & Receive & send cash using BUJU DATA.
+          </div>
+        </div>
+        <div class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow hover:bg-gray-50 hover:-translate-y-2">
+          <div class="relative z-10">
+            <div>
+              <img class="w-10 h-10" src="assets/images/v2/send-receive.png" alt="Airtime to Cash">
+            </div>
+            <div class="mt-5 font-semibold text-blue-600">
+              Send & Receive Money
+            </div>
+            <div class="mt-4 font-light">
+              With BUJU DATA, you can send & receive money with ease. Send money to bank, merchants & other users
+              instantly.
+            </div>
+          </div>
+          <div class="absolute inset-x-0 bottom-0 z-0 duration-300 bg-atg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-16 lg:pb-20">
+    <div class="content">
+      <h2>
+        <div class="flex justify-center">
+          <span class="px-3 py-1 text-sm text-white bg-blue-600 rounded-lg">
+            Why BUJU DATA?
+          </span>
+        </div>
+        <div class="mt-6 text-3xl font-bold leading-normal text-center lg:text-4xl">
+          Transactions Made Easy!
+        </div>
+      </h2>
+
+      <div class="grid grid-cols-1 gap-5 mt-10 lg:mt-20 lg:gap-10 lg:grid-cols-4">
+        <div class="p-5 text-center bg-gray-100 rounded lg:py-7">
+          <div class="flex justify-center">
+            <img class="h-10 lg:h-12" src="pattern.png" alt="Seamless transaction">
+          </div>
+          <div class="mt-5 font-bold">
+            Seamless Transactions.
+          </div>
+          <div class="mt-5 text-sm font-light">
+            BUJU DATA is structured in a manner that makes it easy to use so that you can conveniently access & perform
+            transactions.
+          </div>
+          <div class="mt-6 text-sm font-medium text-blue-600">
+            <a href="#" class="group">
+              Learn More
+              <i class="ml-1 duration-300 fa fa-angle-right group-hover:ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="p-5 text-center bg-gray-100 rounded lg:py-7">
+          <div class="flex justify-center">
+            <img class="h-10 lg:h-12" src="headphone.png" alt="Customer Support">
+          </div>
+          <div class="mt-5 font-bold">
+            Customer Support.
+          </div>
+          <div class="mt-5 text-sm font-light">
+            Get prompt response to your complaints, issues or enquiries by using any of our available call or social
+            channels.
+          </div>
+          <div class="mt-6 text-sm font-medium text-blue-600">
+            <a href="#" class="group">
+              Contact Us
+              <i class="ml-1 duration-300 fa fa-angle-right group-hover:ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="p-5 text-center bg-gray-100 rounded lg:py-7">
+          <div class="flex justify-center">
+            <img class="h-10 lg:h-12" src="security.png" alt="Security">
+          </div>
+          <div class="mt-5 font-bold">
+            Security.
+          </div>
+          <div class="mt-5 text-sm font-light">
+            BUJU DATA has embraced technology in its operations to ensure that you can peform transactions securely and
+            efficiently.
+          </div>
+          <div class="mt-6 text-sm font-medium text-blue-600">
+            <a href="#" class="group">
+              Read More
+              <i class="ml-1 duration-300 fa fa-angle-right group-hover:ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="p-5 text-center bg-gray-100 rounded lg:py-7">
+          <div class="flex justify-center">
+            <img class="h-10 lg:h-12" src="Fast_Speed_Lines_Clock-removebg-preview.png" alt="Fast and reliable">
+          </div>
+          <div class="mt-5 font-bold">
+            Fast & Reliable.
+          </div>
+          <div class="mt-5 text-sm font-light">
+            With experience, we have learnt in the past years to be able to fully optimize our platform for speed and
+            dependability.
+          </div>
+          <div class="mt-6 text-sm font-medium text-blue-600">
+            <a href="#" class="group">
+              More Info
+              <i class="ml-1 duration-300 fa fa-angle-right group-hover:ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pt-12 bg-blue-100 lg:pb-24">
+  <div class="content">
+    <div class="p-5 overflow-hidden text-white bg-blue-600 rounded-lg lg:p-20">
+      <div class="grid grid-cols-1 gap-10 lg:gap-20 lg:grid-cols-2">
+        <div>
+          <div class="text-2xl font-bold lg:text-4xl">
+            Download the app...
+          </div>
+          <p class="mt-6 text-sm leading-normal tracking-wide lg:text-base">
+            Join thousands of customers enjoying day to day seamless transactions using our mobile app.
+          </p>
+        </div>
+        <div class="lg:flex lg:items-center lg:justify-center">
+                    <div class="flex gap-x-3 lg:gap-x-6">
+            <div>
+              <a target="_blank" href=""
+                class="flex items-center justify-between px-4 py-3 text-sm tracking-wide text-white duration-300 bg-black rounded-lg hover:scale-105 hover:bg-gray-900 lg:px-7">
+                <i class="mr-4 text-xl fab fa-apple"></i>
+                <div>
+                  <div class="text-xs font-light">Get it on</div>
+                  <div class="font-bold">App Store</div>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a target="_blank" href=""
+                class="flex items-center justify-between px-4 py-3 text-sm tracking-wide text-white duration-300 bg-black rounded-lg hover:scale-105 hover:bg-gray-900 lg:px-7">
+                <i class="mr-4 text-xl fab fa-google-play"></i>
+                <div>
+                  <div class="text-xs font-light">Download on</div>
+                  <div class="font-bold">Play Store</div>
+                </div>
+              </a>
+            </div>
+          </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+  <footer class="py-12 text-white bg-gray-900">
+      <div class="container px-4 mx-auto">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+          <div>
+            <h4 class="text-xl font-semibold">BUJU DATA</h4>
+            <p class="mt-4 text-gray-400">
+              Your one-stop platform for easy, fast, and secure transactions.
+              Join millions who trust BUJU DATA for their financial
+              transactions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold">Quick Links</h4>
+            <ul class="mt-4 space-y-2">
+              <li>
+                <a href="NEW2.HTML" class="text-gray-400 hover:underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="user/transact.html"
+                  class="text-gray-400 hover:underline"
+                  >Airtime to Cash</a
+                >
+              </li>
+              <li>
+                <a
+                  href="data-topup.html"
+                  class="text-gray-400 hover:underline"
+                  >Data Top-Up</a
+                >
+              </li>
+              <li>
+                <a href="nairapin.html" class="text-gray-400 hover:underline"
+                  >Nairapin</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            
+        <div class="font-semibold text-w">
+          Company
+        </div>
+        <ul class="mt-6 space-y-4 text-gray-400">
+          <li>
+            <a href="#" class="hover:text-blue-100">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="blog.html" class="hover:text-blue-100">
+              Our Blog
+            </a>
+          </li>
+                    <li>
+            <a href="privacy-policy.html" class="hover:text-blue-100">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="terms.html" class="hover:text-blue-100">
+              Terms of Service
+            </a>
+          </li>
+        </ul>
+      </div>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold">Follow Us</h4>
+            <div class="flex mt-4 space-x-4">
+              <a href="#" class="text-blue-500 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-blue-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-red-500 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-pink-500 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 text-center text-gray-500">
+          &copy; 2024 EDUDJE WISDOM. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
